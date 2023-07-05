@@ -5,6 +5,7 @@ import swal from "sweetalert2";
 
 const BASE_URL = 'https://expense-tracker-backend-vmr5.onrender.com'
 
+
 const GlobalContext = React.createContext();
 
 export const GlobalProvider = ({ children }) => {
@@ -107,7 +108,7 @@ export const GlobalProvider = ({ children }) => {
     if (email.length !== 0 || password.length !== 0) {
       const response = await axios.post(`${BASE_URL}/users/login`, user);
       console.log(response.data);
-      window.location.href = "/dashboard";
+      
     } else {
       swal.fire({
         title: "Error!",
