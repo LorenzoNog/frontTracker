@@ -2,7 +2,8 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
 import swal from "sweetalert2";
-const BASE_URL = "http://localhost:2022";
+
+const BASE_URL = process.env.BACKEND_URL_LOCAL;
 
 const GlobalContext = React.createContext();
 
