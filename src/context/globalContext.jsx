@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import axios from "axios";
 import swal from "sweetalert2";
 
-const BASE_URL = 'https://expense-tracker-backend-vmr5.onrender.com'
+const BASE_URL = 'https://expense-tracker-backend-vmr5.onrender.com/'
 
 const GlobalContext = React.createContext();
 
