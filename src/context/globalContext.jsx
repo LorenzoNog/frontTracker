@@ -109,7 +109,7 @@ export const GlobalProvider = ({ children }) => {
       const response = await axios.post(`${BASE_URL}/users/login`, user);
       console.log(response.data);
       if(response){
-        window.location.reload('/dashboard')
+        window.location.reload('https://expense-tracker-front-kappa.vercel.app/dashboard')
       }
     } else {
       swal.fire({
