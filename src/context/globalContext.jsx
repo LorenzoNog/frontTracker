@@ -108,7 +108,9 @@ export const GlobalProvider = ({ children }) => {
     if (email.length !== 0 || password.length !== 0) {
       const response = await axios.post(`${BASE_URL}/users/login`, user);
       console.log(response.data);
-      
+      if(response){
+        window.location.reload('/dashboard')
+      }
     } else {
       swal.fire({
         title: "Error!",
