@@ -1,6 +1,7 @@
 "use client";
 import React, { useContext, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import swal from "sweetalert2";
 
 const BASE_URL = 'https://expense-tracker-backend-vmr5.onrender.com'
@@ -108,7 +109,7 @@ export const GlobalProvider = ({ children }) => {
     if (email.length !== 0 || password.length !== 0) {
       const response = await axios.post(`${BASE_URL}/users/login`, user);
       console.log(response.data)
-      window.location.href = '/users/dashboard'
+      
     } else {
       swal.fire({
         title: "Error!",
