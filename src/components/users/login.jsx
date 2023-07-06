@@ -17,11 +17,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(inputState !== " "){
-      loginUser(inputState)
-      window.location.href = '/users/dashboard'
-    }
-    ; //se convierte en true una vez que se envia el formulario, por lo tanto ingresa recien al segundo intento
+    loginUser(inputState)//se convierte en true una vez que se envia el formulario, por lo tanto ingresa recien al segundo intento
     setInputState({
       email: "",
       password: "",
@@ -64,9 +60,11 @@ const Login = () => {
                 className="focus:outline-none border-b-[1px] bg-transparent border-white p-2 text-white"
               />
             </div>
-            <button className="bg-white rounded-xl font-bold mt-5 hover:bg-black hover:text-white ease-in duration-200">
-              Ingresar
-            </button>
+            <Link to={"/users/dashboard"}>
+              <button className="bg-white rounded-xl font-bold mt-5 hover:bg-black hover:text-white ease-in duration-200">
+                Ingresar
+              </button>
+            </Link>
           </form>
         </div>
         <Link to={"/users/registro"}>
