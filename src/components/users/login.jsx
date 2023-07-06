@@ -17,10 +17,11 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    loginUser(inputState); //se convierte en true una vez que se envia el formulario, por lo tanto ingresa recien al segundo intento
-    if(loginUser(inputState)){
+    if(inputState !== " "){
+      loginUser(inputState)
       window.location.href = '/users/dashboard'
     }
+    ; //se convierte en true una vez que se envia el formulario, por lo tanto ingresa recien al segundo intento
     setInputState({
       email: "",
       password: "",
